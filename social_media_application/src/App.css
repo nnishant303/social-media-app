@@ -1,0 +1,98 @@
+.app{
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-content{
+  min-height: 100vh;
+}
+
+.light-theme{
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.dark-theme{
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+.app-header,
+.card,
+.form-control,
+.sidebar{
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.light-theme .app-header{
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.dark-theme .app-header{
+  background-color: #1f1f1f;
+  color: #f8f9fa;
+  border-color: #343a40 !important;
+}
+
+.light-theme .sidebar{
+  background-color: #212529 !important;
+  color: #ffffff;
+}
+
+.dark-theme .sidebar{
+  background-color: #000000 !important;
+  color: #f8f9fa;
+}
+
+.dark-theme .card{
+  background-color: #1e1e1e;
+  color: #f8f9fa;
+  border-color: #343a40;
+}
+
+.light-theme .card{
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.card-text{
+  background-color: azure;
+}
+
+.dark-theme .card-text{
+  background-color: #2b3035;
+  color: #f8f9fa;
+}
+
+.dark-theme .form-label{
+  color: #f8f9fa;
+}
+
+.dark-theme .form-control{
+  background-color: #1e1e1e;
+  color: #f8f9fa;
+  border-color: #495057;
+}
+
+.dark-theme .form-control::placeholder{
+  color: #adb5bd;
+}
+
+.card{
+  max-height: 400px;
+  position: relative;
+}
+
+.delete-icon{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+.card:hover .delete-icon{
+  opacity: 1;
+}
