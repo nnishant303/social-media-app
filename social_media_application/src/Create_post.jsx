@@ -3,8 +3,8 @@ import { useRef, useState } from "react";
 const Create_post = ({dispatch}) => {
 
     const titleRef = useRef();
-    const descriptionRef = useRef();
-    const hashtagsRef = useRef();
+    const bodyRef = useRef();
+    const tagsRef = useRef();
     const viewsRef = useRef();
     const [isLoading, setIsLoading] = useState(false);
 
@@ -19,8 +19,8 @@ const Create_post = ({dispatch}) => {
             const newPost = {
                 id: Date.now(),
                 title: titleRef.current.value,
-                description: descriptionRef.current.value,
-                hashtags: hashtagsRef.current.value.split(" "),
+                body: bodyRef.current.value,
+                tags: tagsRef.current.value.split(" "),
                 views: viewsRef.current.value
             };
             dispatch({
@@ -29,8 +29,8 @@ const Create_post = ({dispatch}) => {
             });
 
             titleRef.current.value = ""
-            descriptionRef.current.value = ""
-            hashtagsRef.current.value = ""
+            bodyRef.current.value = ""
+            tagsRef.current.value = ""
             viewsRef.current.value = ""
             setIsLoading(false);
         }, 3000);
@@ -60,7 +60,7 @@ const Create_post = ({dispatch}) => {
             id="postDescription"
             rows="4"
             placeholder="Write post description"
-            ref={ descriptionRef}
+            ref={ bodyRef}
           />
         </div>
 
@@ -73,7 +73,7 @@ const Create_post = ({dispatch}) => {
             className="form-control"
             id="postTags"
             placeholder="#travel #react #coding"
-            ref={hashtagsRef}
+            ref={tagsRef}
           />
         </div>
 

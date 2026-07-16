@@ -4,7 +4,7 @@ const Sidebar = ({SetPage}) => {
         SetPage(page);
     }
   return (
-    <div className="sidebar d-flex flex-column flex-shrink-0 p-3 bg-dark text-white vh-100">
+    <div className="sidebar d-flex flex-column flex-shrink-0 p-3 bg-dark text-white vh-100 position-sticky top-0">
 
       <h5 className="text-center mb-4">
         <span>𝓈𝑜𝒸𝒾𝒶𝓁 𝓂𝑒𝒹𝒾𝒶</span>
